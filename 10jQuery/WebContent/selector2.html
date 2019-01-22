@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src='jquery-1.8.3.js'></script>
+<script type="text/javascript">
+function test(){
+	//获取元素,通过属性过滤元素
+	//$('input[class]').css('background-color','red');
+	//通过属性值过滤元素
+	//$('input[class=tt2]').css('background-color','red');
+	//$('input[type=checkbox]').css('display','none');
+	//checked适用于单选复选框
+	//console.log($('input:checked'));
+	//获得被选中的option选项，selected适用于下拉框option
+	//console.log($('option:selected').text());
+	//text选择器
+	//$('input:text').css('background-color','red');
+	//获得所有的复选框
+	//$('input:checkbox').css('display','none');
+	//获取所有的单选框
+	//$('input:radio').css('display','none');
+	//遍历span标签
+	var span = $('span');
+	/* for(var i=0;i<span.size();i++){
+		//var r = span.eq(i);//jquery获取对象的方式
+		//console.log(r.text());
+		var r = span.get(i);//获取dom对象的方式
+		//console.log(r.text());
+		var rr = $('r');//将dom对象转换成jQuery
+		var rrr = rr.get(0);//将jQuery对象转成dom对象
+		console.log(rrr);
+	} */
+	span.each(function(){
+		this//this 当前被遍历的dom 对象
+			//$(this)当前被遍历的jQuery对象
+			console.log($(this));
+	});//遍历span数组
+}
+</script> 
+<title>Insert title here</title>
+</head>
+<body>
+<form action="">
+<input class='tt1' type='text' name='username' value='lanlan'/></br>
+<input class='tt2' type='password' name='password' value='123'/></br>
+<input type='radio' name='sex'/>男<input type='radio' name='sex' />女</br>
+<input type='checkbox' name='hobby' value='1'/>吃
+<input type='checkbox' name='hobby' value='2'/>喝
+<input type='checkbox' name='hobby' value='3'/>玩</br>
+<select name='city'>
+	<option>北京</option>
+	<option>上海</option>
+	<option>开封</option>
+</select></br>
+<input id='btn' type="button" value='测试按钮' onclick='test()'/></br>
+<span>span0</span>
+<span>span1</span>
+<span>span2</span>
+<span>span3</span>
+
+
+</form>
+</body>
+</html>

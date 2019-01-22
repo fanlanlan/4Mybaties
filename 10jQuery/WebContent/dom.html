@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src='jquery-1.8.3.js'></script>
+<script type="text/javascript">
+//Javascript给删除绑定按钮绑定事件
+/* var btn = document.getElementById('btn');
+btn.onclick=test;*/
+window.onload = function(){
+	//在文档加载完毕之后才会运行
+	$('#btn').click(test);
+}
+function test(){
+	alert("按钮点击");	
+} 
+
+</script>
+<title>Insert title here</title>
+<style type="text/css">
+	thead{
+		background-color:lightblue;
+	}
+</style>
+</head>
+<body>
+<form action="">
+图书：<input type="text" name='bookname'/>
+价格：<input type="text" name='price'/>
+<input type="button" value='添加' id='sbadd'/>
+</form>
+<hr/>
+<table align="center" border='1'>
+<thead>
+<tr>
+<th>图书</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody border=1>
+<tr>
+<td>Java编程思想</td>
+<td>180￥</td>
+</tr>
+<tr>
+<td>jquery实战</td>
+<td>42￥</td>
+</tr>
+</tbody>
+</table></br>
+<div align="center" ><input id='btn' type='button' value='删除选中'></div>
+
+</body>
+</html>

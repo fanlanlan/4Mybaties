@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src='jquery-1.8.3.js'></script>
+
+</head>
+<body>
+<table align="center">
+<tr>
+<tb>prev</tb>
+<tb></tb>
+<tb></tb>
+</tr>
+<tr id='tr1'>
+<tb></tb>
+<tb></tb>
+<tb></tb>
+</tr>
+<tr>
+<tb>next</tb>
+<tb></tb>
+<tb></tb>
+</tr>
+</table>
+<script type="text/javascript">
+//通过tr1获取他的父对象
+//console.log($('#tr1').parent());
+//通过tr1获取他的子对象
+//console.log($('#tr1').children());
+//通过tr1获取他的后一个对象
+//console.log($('#tr1').next());
+//通过tr1获取他的上一个对象
+console.log($('#tr1').prev());
+</script>
+</body>
+</html>

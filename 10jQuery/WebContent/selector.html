@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css">
+	div{
+		width:80px;
+		height:40px;
+		border:solid 1px blue;
+		margin-top:10px;
+	}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src='jquery-1.8.3.js'></script>
+<script type="text/javascript">
+function test(){ 
+	//通过id获得对应的标签对象
+	/* var r=$('#d1').text();
+	console.log(r); */
+	//通过css获取样式
+	//$('#d1').css('background-color','red');
+	//$('#d1').css('display','none');
+	/* var domdiv = document.getElementById('d1');
+	var jqdiv = $('#d1');
+	console.log($(domdiv));//将dom对象转换成jQuery对象
+	console.log(jqdiv); */
+	//通过元素选择器选择div标签
+	//$('div').css('background-color','red');
+	//类选择器获取div标签
+	//$('.dd').css('background-color','red');
+	//通过后代选择器选择标签
+	//$('#tb div').css('background-color','red');
+	//通过子代选择器（直接子代） >
+	//$('#d2 > span').css('background-color','red');
+	//紧邻兄弟选择器 		+
+	//$('#d1+div').css('background-color','red');
+	//兄弟选择器（后续所有弟弟） ~
+	//$('#d1 ~ div').css('background-color','red');
+	//简单过滤选择器   选第一个
+	//$('div:first').css('background-color','red');
+	//选最后一个
+	//$('div:last').css('background-color','red');
+	//选第几个    *下表从零开始
+	//$('div:eq(3)').css('background-color','red');
+	//选择小于几的标签
+	//$('div:lt(3)').css('background-color','red');
+	//选择大于几的标签
+	//$('div:gt(3)').css('background-color','red');
+	//even偶数
+	//$('div:even').css('background-color','red');
+	//odd奇数
+	//$('div:odd').css('background-color','red');
+	//not(select)不包括在内
+	//$('div:not(#d1)').css('background-color','red');
+	//没有标签体empty
+	//$('div:empty').css('background-color','red');
+	//是父亲parent
+	//$('div:parent').css('background-color','red');
+	//包含某文本
+	//$('div:contains(div1)').css('background-color','red');
+	//has   选择div中包含span的标签
+	//$('div:has(span)').css('background-color','red');
+	//隐藏hidden
+	//$('div:hidden').css('background-color','red').css('display','block');
+	//显示visible
+	$('div:visible').css('background-color','red');
+	}
+</script>
+</head>
+<body id='tb'>
+<div>div0</div>
+<div class='dd'>div1</div>
+<div class='dd'>div2</div>
+<div id='d1'>div3</div>
+<div>div4</div>
+<div id='d2'>
+<span>span0</span>
+<span>span1</span>
+div5</div>
+<div style='display:none'>div6</div>
+<div>
+	<div>内部div</div>
+</div>
+<div></div>
+<div>div7</div>
+<input type="button" value="测试按钮" onclick="test()"/>
+</body>
+</html>
