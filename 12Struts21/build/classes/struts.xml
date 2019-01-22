@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!--     
+	 dtd约束文件中的标签规格
+	   配置文件，配置action 类   
+	 name:包的名字
+	 package：配置文件的包，将配置文件分包放置管理 
+	 
+	 namespace:是action的访问前缀，既要访问namespace为"/a"的包中的name为"hilo"的action：
+	 			http://localhost:8888/12Struts/hilo
+	 			在namespace的支持下，较彻底的将配置文件分模块管理了。
+ -->
+<struts>
+<!-- 接受参数测试 -->
+	<package name="c40" extends="struts-default" namespace="/param">
+		<action name="param40" class="com.c40.action.ParamAction" method="param40">
+		<!-- dispatcher:（type的默认值）请求转发到jsp    
+			 redirect:重定向到jsp
+			 redirectAction：重定向到action 
+			 chain：转发到action
+			 -->
+			<result name="paramok" type="dispatcher">/view/index.jsp</result>		
+		</action>
+	</package>
+	<!-- 跳转测试 -->
+	<package name="c41" extends="struts-default" namespace="/jump">
+		<action name="jumps" class="com.c40.jump.action.JumpAction" method="jump40">
+		<!-- dispather:（type的默认值）请求转发到jsp    
+			 redirect:重定向到jsp
+			 redirectAction：重定向到action 
+			 chain：转发到action
+			 -->
+			<result name="jumpok" type="dispatcher">/view/index.jsp</result>		
+			<result name="jump2ok" type="redirect">/view/index.jsp</result>		
+			<!-- 如果跳转双方在同一个package，则namespace可以省略，即默认是在当前包中跳转 -->
+			<result name="jump3ok" type="chain">
+					<param name="namespace">/jump</param>
+					<param name="actionName">jump41</param>			
+			</result>
+			<!-- <result name="jump3ok" type="chain">jump41</result>	
+			<result name="jump5ok" type="redirectAction">jump41</result> -->	
+			<result name="jump5ok" type="redirectAction">
+					<param name="namespace">/jump</param>
+					<param name="actionName">jump41</param>			
+			</result>
+		</action>
+		<action name="jump41" class="com.c40.jump.action.JumpAction2" method="jump41">
+			<result name="jump4ok">/view/index.jsp</result>		
+		</action>
+	</package>
+</struts>
