@@ -1,0 +1,13 @@
+******************person*********************
+drop table person;
+drop sequence person_seq;
+
+create table person
+(
+	id number(7) primary key,
+	username varchar2(24) not null,
+	realname varchar2(24) not null,
+	password varchar2(24) not null
+)
+create sequence person_seq;
+=================================================
