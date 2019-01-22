@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+  /*
+  	创建自定义对象
+	Java 由对象模板class创建对象
+    js   没有类的概念，也没有对象的模板
+ */
+ 	var stu={
+		  name:"haha",
+		  age:13,
+		 getname:function(){return this.name}
+  };
+  console.log(stu.name);//对象属性名
+  console.log(stu['name']);//队象['属性名']
+  stu.name="heihei";
+  console.log(stu.name);
+  console.log(stu);
+  stu.adress="上海市普陀区光新路168号";
+  console.log(stu);
+  delete stu.adress;
+  console.log(stu);
+  //创建person对象
+  var p=new Object();
+  p.name='fanlanlan';
+  p.age=18;
+  p.adress='河南省开封市尉氏县庄头乡小范村三组';
+  console.log(p);
+  //调用stu的getname方法
+  var n = stu.getname();
+  console.log(n);
+  /*
+  	遍历stu对象的所有属性，如果是方法就执行，否则输出属性值
+  */
+  /*for(m in stu){
+		if(typeof(stu[m])=='[function]'){}
+			stu[m]();
+	} else{
+		console.log(stu[m]());
+		
+	}  */
+ 
+ 
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var attr=[1,2,3,"123",4,5,6];
+	console.log(attr);
+	attr.pop();//删除数组最后一个元素
+	console.log(attr);
+	attr.splice(1,1);//删除地i个位置后的连续len个数
+	console.log(attr);
+	attr.reverse();//将数组倒置
+	console.log(attr);
+	var ass=[1,15,3,0,8,44,23,6];
+	console.log(ass);
+	ass.sort();//排序，按照首字母顺序
+	console.log(ass);
+	//指定按照数组排序，给数组按照从小到大的顺序排序
+	function mysort(a,b){
+		return a-b;	
+	}
+	ass.sort(mysort);
+	console.log(ass);
+	function fun_sb(){
+		alert("======");
+	}
+</script>
+</head>
+<body>
+<form action="" onsubmit='fun_sb()'>
+<input type="submit">
+</form>
+</body>
+</html>

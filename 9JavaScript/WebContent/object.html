@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a="abc";
+	var b=new String("abc");
+	console.log(a.length);
+	console.log(a.charAt(1));
+	var aa="abcabc";
+	aa = aa.replace("ab","bc");
+	console.log(aa);
+	//日期date
+	//获得当前系统时间
+	var date = new Date();
+	console.log(date);
+	console.log("年："+date.getFullYear());//获得年份
+	console.log("月："+(date.getMonth()+1));//获得月份
+	console.log("日："+date.getDate());//获得当天日期
+	//获得4的平方根
+	var b = Math.sqrt(4);
+	console.log(b);
+	//alert(b);
+	//获得一个随机整数
+	var c=Math.round(Math.random()*100);
+	console.log(c);
+	//alert(c);
+	/*
+	数组：
+		Java:   int[] as=new int[10];数组的长度不可变
+		js  :   var arra = [];数组长度可变，数据类型无限制
+	*/
+	var as=[1,'2',new Date(),[1,2]];//创建数组
+		console.log(typeof(as));
+		as[4]= 'haha';//添加
+		console.log(as);
+		console.log(as[7]);//访问
+		//修改数组
+		as[0]=10;
+		as[9]=1;
+		console.log(as.length);
+		//遍历数组
+		console.log('---for遍历开始----');
+		for(var i=0;i<as.length;i++){
+			console.log(as[i]);//可以获取undefined的值
+		}
+		console.log('---for遍历结束----');
+		//foreach遍历
+		console.log('---for eatch开始----');
+		for(i in as){
+			console.log(as[i]);//无法获取不存在的值undefined
+		}
+		console.log('---for eatch结束----');
+		
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>

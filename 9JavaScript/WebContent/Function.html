@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+//定义函数1
+function f1(a,b){
+	//alert(a);
+	console.log(a);
+	///alert(b);
+	console.log(b);
+	return a+b;
+}
+/*
+ 	1.调用函数只需要明确函数名即可调用，语法上不限制实参个数
+ 	2.调用时参数个数不限制
+ 	3.形参个数，和返回值类型不需要声明出来
+ */
+ 	var r= f1(1,2);
+ 	console.log(r);
+ 	//alert(r);
+ //js 中函数也是一种对象，函数的变量名同时也是函数名
+ //函数内部有一个局部变量arguments：数组，保存了函数调用时，所传入的实际参数
+ 	var f2=function (a,b){
+	 //alert(arguments);
+	 console.log(arguments);
+	 return a*b;
+ };
+ 	console.log(typeof(f2));
+ 	//调用 
+ 	var r2 = f2(2,4,5,6,7,8);
+ 	console.log(r2);
+ 	//alert(r2);
+ 	
+ //3.通过function创建函数
+ 	var f3 = new Function('a','b','return a+b');
+    console.log(f3(5,6));
+ 	//alert(f3(5,6));
+ 	//new Function("alert('a')")();//***直接创建函数对象，执行字符串函数体的代码
+ //4.将函数作为实参传递
+ 	function myfun(f1){
+ 		console.log(f1(1,2));
+ 	}
+</script>
+</head>
+<body>
+</body>
+</html>
